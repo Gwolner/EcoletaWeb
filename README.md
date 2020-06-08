@@ -1,6 +1,6 @@
 # Next Level Week #1
 
-> Anotações da prática do Booster NLW#1 para Web
+> Anotações da prática do Booster NLW#1 para Web (ReactJS)
 
 ## Comandos
 
