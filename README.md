@@ -43,4 +43,4 @@ no arquivo setting.json que abrir, inserir os comandos:
 "emmet.includeLanguages": {"javascript": "javascriptreact"},
 ```
 
-
+teste integração com VSCode
