@@ -28,9 +28,9 @@ README.md
 
 React é uma biblioteca em JS, então tudo que é montado na tela é por meio do JS. Ou seja, a interface é montada a partir do momento que o site carrega. Ou seja, a página é criada em tempo de execução.
 
-Arquivo index.tsx é o primeiro arquivo carregado pelo React. Ele importa o React (comum a todos os arquivos que vamos usar o React) e importa o reactDOM (Para declarar à biblioteca React que o uso será web/desktop), desta forma com o ReactDOM.render(), que serve para informar que se deseja renderizar ("mostrar em tela") o <app/> dentro do documento.getElementById('root'). Ou seja, está mandando o React mostrar em tela o arquivo app (<app/>).
+Arquivo index.tsx é o primeiro arquivo carregado pelo React. Ele importa o React (comum a todos os arquivos que vamos usar o React) e importa o reactDOM (Para declarar à biblioteca React que o uso será web/desktop), desta forma com o ReactDOM.render(), que serve para informar que se deseja renderizar ("mostrar em tela") o `<app/>` dentro do documento.getElementById('root'). Ou seja, está mandando o React mostrar em tela o arquivo app (`<app/>`).
 
-E o que tem no app? indo no arquivo App.tsx tem o <h1>Hello World<h1/>. Isso acontece de forma automatica. Basicamente, o React tem uma div em tela (não precisa ser uma div, mas usamos ja o que vem pronto) e todo conteudo do projeto é exibido dentro desta div.
+E o que tem no app? indo no arquivo App.tsx tem o `<h1>Hello World<h1/>`. Isso acontece de forma automatica. Basicamente, o React tem uma div em tela (não precisa ser uma div, mas usamos ja o que vem pronto) e todo conteudo do projeto é exibido dentro desta div.
 
 ## Config VSCode 
 
