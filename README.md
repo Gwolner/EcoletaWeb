@@ -8,7 +8,7 @@
 
 
 
-## Limpadno estrutura da aplicação
+## Limpando estrutura da aplicação
 
 * Diretório public
 Apagar: favicom.ico, logo192.png, logo512.png, manifest.json, robots.txt
