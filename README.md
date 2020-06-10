@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Next Level Week #1
 
 > Anotações da prática do Booster NLW#1 para Web (ReactJS)
@@ -45,3 +46,6 @@ no arquivo setting.json que abrir, inserir os comandos:
 
 
 
+=======
+# al-sa-her
+>>>>>>> 8a891a9e1c54005b11d5dbb793ee4cba323d5635
