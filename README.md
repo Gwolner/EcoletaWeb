@@ -4,7 +4,7 @@
 
 ## Comandos
 
-* 
+* npm start
 
 
 
@@ -42,5 +42,30 @@ no arquivo setting.json que abrir, inserir os comandos:
 "emmet.syntaxProfiles": {"javascript": "jsx"},
 "emmet.includeLanguages": {"javascript": "javascriptreact"},
 ```
+# JSX
 
-teste integração com VSCode
+É a possibilidade de escrevermos XML (HTML segue a sintaxe do HTML) diretamente dento do JS/TS.
+Componentes que contem HTML dentro de si devem terminar com .jsx (ou no caso, .tsx).
+
+## Componentes (Header)
+
+É a facilidade de separação da aplicação em pequenos blocos que podem ser reutilizados.
+OBS: TODO componente deve ter letra MAIUSCULA no início, pra não ser confundido com nenhuma tag do HTML.
+
+Então componente é uma forma de isolar um trecho de código da aplicação, geralmente HTML, CSS ou JS pra poder reutilizar quantas vezes quiser.
+
+# Propriedade
+
+No React são atributos que enviamos para o componente através. 
+No TS não se chama de parâmetro, mas sim de Generic.
+Mais informações nas anotações de App.tsx e Header.tsx.
+
+# estado e imutabilidade
+
+Estado = Armazenar uma informação a partir do componente.
+Ex: usuario precisa clicar em algo no componente, alterar ou inserir algum valor.
+São informações mantidas pelo próprio componente!
+
+Imutabilidade = Nunca pode alterar uma informação de estado de uma maneira direta no React.
+Ao invés de alterar o valor pre existente, é preciso criar um novo valor para este estado com as modificações que se deseja.
+
