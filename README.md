@@ -6,7 +6,16 @@
 
 * npm start
 
+* npm install react-icons
+Instala uma fonte de ícones
 
+* npm install react-router-dom
+Lib de roteamente, permitindo que uma página seja redirecionada para uma outra.
+
+* npm install @types/react-router-dom -D
+
+* npm install leaflet react-leaflet
+Instala as DUAS dibliotecas de mapas
 
 ## Limpando estrutura da aplicação
 
@@ -68,4 +77,10 @@ São informações mantidas pelo próprio componente!
 
 Imutabilidade = Nunca pode alterar uma informação de estado de uma maneira direta no React.
 Ao invés de alterar o valor pre existente, é preciso criar um novo valor para este estado com as modificações que se deseja.
+
+## Mapa na aplicação
+
+O mapa do Google não é viável (precisa de uma conta, cadastrar cartão, usar plano gratuito limitado).
+O mapa usado sera um de código aberto chamado Leaflet (https://leafletjs.com/) para JS e 
+para React é o https://react-leaflet.js.org/
 
