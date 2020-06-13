@@ -19,7 +19,8 @@ Instala as DUAS dibliotecas de mapas
 
 * npm install axios
 Bilbioteca que permite fazer reaquisições pro backend Node.
-Da pra fazer sem bibliote, mas usa-la no app tem-se um propósito!
+Da pra fazer sem biblioteca, mas usa-la no app tem-se um propósito (como usar o recurso de baseURL, por exemplo)!
+OBS: O fetch é uma api que vem nativa no navegador pra fazer requisições.
 
 ## Limpando estrutura da aplicação
 
@@ -88,3 +89,6 @@ O mapa do Google não é viável (precisa de uma conta, cadastrar cartão, usar 
 O mapa usado sera um de código aberto chamado Leaflet (https://leafletjs.com/) para JS e 
 para React é o https://react-leaflet.js.org/
 
+## Pasta services
+
+Destinada para as formas de obter recursos do meio externo.
