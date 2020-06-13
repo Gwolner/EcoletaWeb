@@ -17,6 +17,10 @@ Lib de roteamente, permitindo que uma página seja redirecionada para uma outra.
 * npm install leaflet react-leaflet
 Instala as DUAS dibliotecas de mapas
 
+* npm install axios
+Bilbioteca que permite fazer reaquisições pro backend Node.
+Da pra fazer sem bibliote, mas usa-la no app tem-se um propósito!
+
 ## Limpando estrutura da aplicação
 
 * Diretório public

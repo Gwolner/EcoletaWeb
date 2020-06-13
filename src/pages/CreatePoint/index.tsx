@@ -49,8 +49,12 @@ const CreatePoint = () =>{
                         <span>Selecione o endereço no mapa</span>
                     </legend>
 
-                    <Map>
-                        <TileLayer/>
+                    <Map center={[-8.0555717, -34.8787303]} zoom={15}>
+                        <TileLayer
+                            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={[-8.0555717, -34.8787303]}/>
                     </Map>
 
                     <div className="field-group">
