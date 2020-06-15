@@ -4,7 +4,11 @@
 
 ## Comandos
 
+* npx create-react-app web
+Cria projeto React de nome web
+ 
 * npm start
+Inicia o projeto React
 
 * npm install react-icons
 Instala uma fonte de ícones
