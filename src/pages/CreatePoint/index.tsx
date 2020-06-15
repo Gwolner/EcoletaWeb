@@ -4,16 +4,12 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import axios from 'axios';
-
 import logo from '../../assets/logo.svg';
 import './styles.css'
 import api from '../../services/api';
 
 
-//Tipo da variável: Para informar o tipo retornado do useState quando este retorna um objeto ou array!!
-
 //Interfaces
-
 interface Item {
     id: number,
     title: string,
@@ -46,8 +42,8 @@ const CreatePoint = () =>{
     });
 	const history = useHistory();
 
-
-	
+    
+    
     //Requisições assíncronas
 
     // Carregada quando a tela é iniciada - Localização atual no mapa
@@ -62,12 +58,10 @@ const CreatePoint = () =>{
 
     //Imagens de itens de coleta - API Node
     useEffect(()=> {
-        api.get('items').then(response =>{ //Usa .then() por que é uma promise. o useEffect não permite usar async.
+        api.get('items').then(response =>{
             setItems(response.data);
         });
-    }, []) /*QUAL função eu quero executar e QUANDO eu quero. Este quando é baseado 
-    em "Quando tal informação mudar"!! Executa a função sempre que variavel muda, 
-    em vazio, executa apenas uma vez, quando o componente aparecer em tela. */
+    }, []);
 
     //Unidades Federativas - API IBGE
     useEffect(() => {
@@ -88,7 +82,8 @@ const CreatePoint = () =>{
             const cityNames = response.data.map(city => city.nome);
             setCities(cityNames);
         });
-    }, [selectedUF]); //Carregar as cidades sempre que a UF mudar.
+    }, [selectedUF]);
+
 
 
     //Funções
@@ -106,8 +101,7 @@ const CreatePoint = () =>{
 
     function handleInputChange(event: ChangeEvent<HTMLInputElement>){
         const { name, value } = event.target;
-        setFormData({...formData, [name]: value}); 
-        //[name] corresponde a qualquer propriedade (nome, email, whatsapp) que estiver com seu value sendo passado.
+        setFormData({...formData, [name]: value});
     };
 	
 	function handleSelectedPosition(event: LeafletMouseEvent){
@@ -119,13 +113,10 @@ const CreatePoint = () =>{
 
     function handleSelectedItem(id: number){
         const alreadySelected = selectedItems.findIndex(item => item === id);
-        /* Verificar s o usuario clicou em um item que ele ja clicou antes.
-        O findIndex retorna um numero >= 0  se o item selecionado ja tiver dentro do array.
-        Caso contrário, retorna -1.*/
+
         if(alreadySelected >= 0){
             //Remove o item
             const filteredItems = selectedItems.filter(item => item !== id);
-            //filteredItems vai conter todos os items, menos o que precisa remover.
             setSelectedItems(filteredItems);
         } else {
             //Adiciona item
@@ -159,6 +150,9 @@ const CreatePoint = () =>{
 
         history.push('/');
     }
+
+
+
 
     //Página criada
     return (
@@ -204,7 +198,7 @@ const CreatePoint = () =>{
                     </legend>
 
                     <Map center={initialPosition} zoom={15} onclick={handleSelectedPosition}>
-                        <TileLayer //Copiado e colado do site do Leaftlet
+                        <TileLayer
                             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
@@ -240,10 +234,7 @@ const CreatePoint = () =>{
                     </legend>
 
                     <ul className="items-grid">
-                        {items.map(item => ( /* Sempre que percorremos um array pra retornar alguma coisa, 
-                        o primeiro elemento dentro deste retorno precisa ter uma propriedade obrigatória 
-                        chamada "key". Isto serve para o React conseguir encontrar  este elemento de uma 
-                        forma mais rápida na hora de atualzia-lo.*/
+                        {items.map(item => (
                             <li key={item.id} 
                                 onClick={() => handleSelectedItem(item.id)} 
                                 className={selectedItems.includes(item.id) ? 'selected' : ''}
